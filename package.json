@@ -4,7 +4,10 @@
   "description": "news blog site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm start --prefix ST1-Backend",
+    "client": "npm start --prefix ST1-Frontend",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/gur26001/The-Times-Of-Hindustan/issues"
   },
-  "homepage": "https://github.com/gur26001/The-Times-Of-Hindustan#readme"
+  "homepage": "https://github.com/gur26001/The-Times-Of-Hindustan#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
 }
